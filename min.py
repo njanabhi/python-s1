@@ -1,0 +1,6 @@
+print("TO FIND MINIMUM AMONG GIVEN NUMBERS")
+a=int(input("enter first number: "))
+b=int(input("enter second number: "))
+c=int(input("enter third number: "))
+min=min(a,b,c)
+print("minimum among numbers",min)
