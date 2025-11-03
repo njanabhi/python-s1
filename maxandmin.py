@@ -1,0 +1,7 @@
+a=int(input("enter the first number:"))
+b=int(input("enter the second number:"))
+c=int(input("enter the third number:"))
+m=max(a,b,c)
+n=min(a,b,c)
+print("the biggest number is:",m)
+print("the smallest number is:",n)
