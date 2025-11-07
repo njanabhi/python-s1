@@ -4,21 +4,27 @@ class Student:
         self.name=name
         self.course=course
     def displayStudent(self):
-        print("RollNo:",self.rollno)
+        print("Rollno:",self.rollno)
         print("Name:",self.name)
-        print("course:",self.course)
+        print("Course:",self.course)
 class Test(Student):
     def getMarks(self,marks):
         self.marks=marks
     def displayMarks(self):
-        print("Total marks:",self.marks)
-class Result(Test):
+        print("Total Marks:",self.marks)
+class Sports:
+    def getSportsMarks(self,spmarks):
+        self.spmarks=spmarks
+    def displaySportsMarks(self):
+        print("Sports Marks:",self.spmarks)
+class Result(Test,Sports):
     def calculateGrade(self):
-        if self.marks>480:
+        m=self.marks+self.spmarks
+        if m>480:
             self.grade="Distinction"
-        elif self.marks>360:
+        elif m>360:
             self.grade="First Class"
-        elif self.marks>240:
+        elif m>240:
             self.grade="Second Class"
         else:
             self.grade="Failed"
@@ -27,10 +33,13 @@ r=int(input("Enter Roll Number:"))
 n=input("Enter Name:")
 c=input("Enter Course Name:")
 m=int(input("Enter Marks:"))
+s=int(input("Enter Sports marks:"))
 print("Result")
 stud1=Result()
 stud1.getdata(r,n,c)
 stud1.getMarks(m)
-stud1.displayStudent()
-stud1.displayMarks()
-stud1.calculateGrade()
+stud1.getSportsMarks(s) 
+stud1.displayStudent() 
+stud1.displayMarks() 
+stud1.displaySportsMarks() 
+stud1.calculateGrade() 
